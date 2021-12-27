@@ -175,11 +175,16 @@ function App() {
   function updateMedicament(event) {
     event.preventDefault();
     let url = 'http://localhost:3010/medicine/';
-    const { id_med, cat } = { ...formMedicament2 }
+    const { id_med, title, cat, authorization_holder,cis_code,composition, generic_groups } = { ...formMedicament2 }
     console.log(formMedicament2);
     axios.put(url, {
       id_med,
+      title,
       cat,
+      authorization_holder,
+      cis_code,
+      composition, 
+      generic_groups,
     });
   } 
 
@@ -403,11 +408,11 @@ function App() {
               <Form.Group className="mb-3" >
                 <Form.Label>ID Medicament</Form.Label>
                 <Form.Control
-                  value={formCategorie2.id_med}
+                  value={formMedicament2.id_med}
                   type="id" placeholder="Id Medicament..."
                   onChange={
                     (e) => {
-                      let tmp = { ...formMedicament }
+                      let tmp = { ...formMedicament2 }
                       tmp.id_med = e.target.value;
                       setFormMedicament2(tmp)
 
@@ -418,8 +423,9 @@ function App() {
               <Form.Group className="mb-3" >
                 <Form.Label>Nom medicament</Form.Label>
                 <Form.Control
-                  value={formCategorie2.title}
-                  type="nom" placeholder="Nom Medicament..."
+                  value={formMedicament2.title}
+                  type="title" placeholder="Nom Medicament..."
+                  required
                   onChange={
                     (e) => {
                       let tmp = { ...formMedicament2 }
@@ -427,7 +433,7 @@ function App() {
                       setFormMedicament2(tmp)
 
                     }}
-                  required />
+                   />
               </Form.Group>
 
               <Form.Group className="mb-3" >
@@ -448,8 +454,9 @@ function App() {
               <Form.Group className="mb-3" >
                 <Form.Label>Autorisation</Form.Label>
                 <Form.Control
-                  value={formCategorie2.authorization_holder}
+                  value={formMedicament2.authorization_holder}
                   type="autorisation" placeholder="Autorisation Medicament..."
+                  required
                   onChange={
                     (e) => {
                       let tmp = { ...formMedicament2 }
@@ -457,13 +464,14 @@ function App() {
                       setFormMedicament2(tmp)
 
                     }}
-                  required />
+                   />
               </Form.Group>
               <Form.Group className="mb-3" >
                 <Form.Label>CIS code Medicament</Form.Label>
                 <Form.Control
-                  value={formCategorie2.cis_code}
+                  value={formMedicament2.cis_code}
                   type="id" placeholder="CIS code Medicament..."
+                  required
                   onChange={
                     (e) => {
                       let tmp = { ...formMedicament2 }
@@ -471,7 +479,7 @@ function App() {
                       setFormMedicament2(tmp)
 
                     }}
-                  required />
+                   />
               </Form.Group>
 
               <Button variant='warning' type='submit'>Modifier</Button>
