@@ -4,9 +4,7 @@ Démonstration d'une utilisation de base d'une API
 
 ## Installation
 
-Télécharger le dépot :
-
-`git clone https://github.com/sidaliSadi/React-api.git`
+Télécharger le dépot 
 
 Se positionner dans le répertoire et installer les dépendances via 
 
