@@ -333,7 +333,6 @@ function App() {
                       let tmp = { ...formMedicament }
                       tmp.title = e.target.value;
                       setFormMedicament(tmp)
-
                     }}
                   required />
               </Form.Group>
@@ -363,7 +362,6 @@ function App() {
                       let tmp = { ...formMedicament }
                       tmp.authorization_holder = e.target.value;
                       setFormMedicament(tmp)
-
                     }}
                   required />
               </Form.Group>
@@ -404,7 +402,6 @@ function App() {
             </Form>
 
             <Form onSubmit={(e) => updateMedicament(e)}>
-
               <Form.Group className="mb-3" >
                 <Form.Label>ID Medicament</Form.Label>
                 <Form.Control
@@ -415,7 +412,6 @@ function App() {
                       let tmp = { ...formMedicament2 }
                       tmp.id_med = e.target.value;
                       setFormMedicament2(tmp)
-
                     }}
                   required />
               </Form.Group>
@@ -431,7 +427,6 @@ function App() {
                       let tmp = { ...formMedicament2 }
                       tmp.title = e.target.value;
                       setFormMedicament2(tmp)
-
                     }}
                    />
               </Form.Group>
@@ -462,7 +457,6 @@ function App() {
                       let tmp = { ...formMedicament2 }
                       tmp.authorization_holder = e.target.value;
                       setFormMedicament2(tmp)
-
                     }}
                    />
               </Form.Group>
@@ -477,15 +471,11 @@ function App() {
                       let tmp = { ...formMedicament2 }
                       tmp.cis_code = e.target.value;
                       setFormMedicament2(tmp)
-
                     }}
                    />
               </Form.Group>
-
               <Button variant='warning' type='submit'>Modifier</Button>
             </Form>
-            
-
           </Col>
           
           <Col>
